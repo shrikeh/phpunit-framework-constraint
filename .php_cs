@@ -1,6 +1,6 @@
 <?php
 $header = <<<'EOF'
-This file is part of PHPUnit.
+This file is part of sebastian/phpunit-framework-constraint.
 
 (c) Sebastian Bergmann <sebastian@phpunit.de>
 
@@ -72,11 +72,7 @@ return PhpCsFixer\Config::create()
     )
     ->setFinder(
         PhpCsFixer\Finder::create()
-        ->files()
-        ->in(__DIR__ . '/build')
-        ->in(__DIR__ . '/src')
-        ->in(__DIR__ . '/tests/Framework')
-        ->in(__DIR__ . '/tests/Runner')
-        ->in(__DIR__ . '/tests/Util')
-        ->name('*.php')
+            ->in(__DIR__)
+            ->exclude('tests/_files')
+            ->notName('bootstrap.php')
     );
