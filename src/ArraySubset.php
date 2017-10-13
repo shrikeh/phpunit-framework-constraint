@@ -1,6 +1,6 @@
 <?php
 /*
- * This file is part of PHPUnit.
+ * This file is part of sebastian/phpunit-framework-constraint.
  *
  * (c) Sebastian Bergmann <sebastian@phpunit.de>
  *
