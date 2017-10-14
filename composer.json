@@ -26,7 +26,8 @@
         "ext-json": "*",
         "ext-libxml": "*",
         "ext-mbstring": "*",
-        "ext-xml": "*"
+        "ext-xml": "*",
+        "sebastian/comparator": "^2.0.2"
     },
     "require-dev": {
         "phpunit/phpunit": "^6.4.1"
