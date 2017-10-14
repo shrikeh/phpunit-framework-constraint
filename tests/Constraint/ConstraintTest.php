@@ -8,12 +8,14 @@
  * file that was distributed with this source code.
  */
 
-namespace PHPUnit\Framework;
+namespace PHPUnit\Framework\Constraint;
 
-use PHPUnit\Framework\Constraint\Count;
-use PHPUnit\Framework\Constraint\IsEmpty;
-use PHPUnit\Framework\Constraint\SameSize;
-use PHPUnit\Framework\Constraint\TraversableContains;
+use PHPUnit\Framework\Assert;
+use PHPUnit\Framework\Constraint;
+use PHPUnit\Framework\Exception;
+use PHPUnit\Framework\ExpectationFailedException;
+use PHPUnit\Framework\TestCase;
+use PHPUnit\Framework\TestFailure;
 use PHPUnit\Util\Filter;
 
 class ConstraintTest extends TestCase
