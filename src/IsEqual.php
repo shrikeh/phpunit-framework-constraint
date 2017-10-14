@@ -10,7 +10,6 @@
 namespace PHPUnit\Framework\Constraint;
 
 use PHPUnit\Framework\ExpectationFailedException;
-use PHPUnit\Util\InvalidArgumentHelper;
 use SebastianBergmann;
 
 /**
@@ -61,26 +60,26 @@ class IsEqual extends Constraint
      * @param bool  $canonicalize
      * @param bool  $ignoreCase
      *
-     * @throws \PHPUnit\Framework\Exception
+     * @throws Exception\InvalidArgumentException
      */
     public function __construct($value, $delta = 0.0, $maxDepth = 10, $canonicalize = false, $ignoreCase = false)
     {
         parent::__construct();
 
         if (!\is_numeric($delta)) {
-            throw InvalidArgumentHelper::factory(2, 'numeric');
+            throw Exception\InvalidArgumentException::type(2, 'numeric');
         }
 
         if (!\is_int($maxDepth)) {
-            throw InvalidArgumentHelper::factory(3, 'integer');
+            throw Exception\InvalidArgumentException::type(3, 'integer');
         }
 
         if (!\is_bool($canonicalize)) {
-            throw InvalidArgumentHelper::factory(4, 'boolean');
+            throw Exception\InvalidArgumentException::type(4, 'boolean');
         }
 
         if (!\is_bool($ignoreCase)) {
-            throw InvalidArgumentHelper::factory(5, 'boolean');
+            throw Exception\InvalidArgumentException::type(5, 'boolean');
         }
 
         $this->value        = $value;
