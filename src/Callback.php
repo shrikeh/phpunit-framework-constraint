@@ -9,7 +9,7 @@
  */
 namespace PHPUnit\Framework\Constraint;
 
-use PHPUnit\Util\InvalidArgumentHelper;
+use PHPUnit\Framework\Constraint\Exception\InvalidArgumentException;
 
 /**
  * Constraint that evaluates against a specified closure.
@@ -26,7 +26,7 @@ class Callback extends Constraint
     public function __construct($callback)
     {
         if (!\is_callable($callback)) {
-            throw InvalidArgumentHelper::factory(
+            throw InvalidArgumentException::type(
                 1,
                 'callable'
             );
