@@ -75,7 +75,7 @@ EOF
 
     public function testConstraintFileNotExists()
     {
-        $file = \dirname(__DIR__) . DIRECTORY_SEPARATOR . '_files' . DIRECTORY_SEPARATOR . 'ClassWithNonPublicAttributes.php';
+        $file = __FILE__;
 
         $constraint = Assert::logicalNot(
             Assert::fileExists()
@@ -105,7 +105,7 @@ EOF
 
     public function testConstraintFileNotExists2()
     {
-        $file = \dirname(__DIR__) . DIRECTORY_SEPARATOR . '_files' . DIRECTORY_SEPARATOR . 'ClassWithNonPublicAttributes.php';
+        $file = __FILE__;
 
         $constraint = Assert::logicalNot(
             Assert::fileExists()
