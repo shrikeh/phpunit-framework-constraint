@@ -9,7 +9,8 @@
  */
 namespace PHPUnit\Framework\Constraint;
 
-use PHPUnit\Framework\ExpectationFailedException;
+use PHPUnit\Framework\Constraint\Exception\ExpectationFailedException;
+use PHPUnit\Framework\Constraint\Exception\InvalidArgumentException;
 use SebastianBergmann;
 
 /**
@@ -67,19 +68,19 @@ class IsEqual extends Constraint
         parent::__construct();
 
         if (!\is_numeric($delta)) {
-            throw Exception\InvalidArgumentException::type(2, 'numeric');
+            throw InvalidArgumentException::type(2, 'numeric');
         }
 
         if (!\is_int($maxDepth)) {
-            throw Exception\InvalidArgumentException::type(3, 'integer');
+            throw InvalidArgumentException::type(3, 'integer');
         }
 
         if (!\is_bool($canonicalize)) {
-            throw Exception\InvalidArgumentException::type(4, 'boolean');
+            throw InvalidArgumentException::type(4, 'boolean');
         }
 
         if (!\is_bool($ignoreCase)) {
-            throw Exception\InvalidArgumentException::type(5, 'boolean');
+            throw InvalidArgumentException::type(5, 'boolean');
         }
 
         $this->value        = $value;
@@ -136,10 +137,7 @@ class IsEqual extends Constraint
                 return false;
             }
 
-            throw new ExpectationFailedException(
-                \trim($description . "\n" . $f->getMessage()),
-                $f
-            );
+            throw ExpectationFailedException::comparisonFailure($description, $f);
         }
 
         return true;

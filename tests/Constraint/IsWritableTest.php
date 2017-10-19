@@ -11,7 +11,7 @@
 namespace PHPUnit\Framework\Constraint;
 
 use PHPUnit\Framework\Constraint;
-use PHPUnit\Framework\ExpectationFailedException;
+use PHPUnit\Framework\Constraint\Exception\ExpectationFailedException;
 use PHPUnit\Framework\TestCase;
 use PHPUnit\Framework\TestFailure;
 

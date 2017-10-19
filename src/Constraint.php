@@ -11,7 +11,7 @@
 namespace PHPUnit\Framework\Constraint;
 
 use Countable;
-use PHPUnit\Framework\ExpectationFailedException;
+use PHPUnit\Framework\Constraint\Exception\ExpectationFailedException;
 use PHPUnit\Framework\SelfDescribing;
 use SebastianBergmann\Comparator\ComparisonFailure;
 use SebastianBergmann\Exporter\Exporter;
@@ -114,7 +114,7 @@ abstract class Constraint implements Countable, SelfDescribing
             $failureDescription = $description . "\n" . $failureDescription;
         }
 
-        throw new ExpectationFailedException(
+        throw ExpectationFailedException::fail(
             $failureDescription,
             $comparisonFailure
         );
