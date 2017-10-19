@@ -16,12 +16,19 @@ use SebastianBergmann\Comparator\ComparisonFailure;
 final class ExpectationFailedException extends RuntimeException implements ConstraintException, SelfDescribing
 {
     /**
-     * @param $failureDescription
+     * @var null|ComparisonFailure
+     */
+    private $comparisonFailure;
+
+    /**
+     * @param string $failureDescription
      * @param ComparisonFailure|null $comparisonFailure
      * @return ExpectationFailedException
      */
-    public static function fail($failureDescription, ComparisonFailure $comparisonFailure = null): ExpectationFailedException
-    {
+    public static function fail(
+        string $failureDescription,
+        ComparisonFailure $comparisonFailure = null
+    ): ExpectationFailedException {
         return new self($failureDescription, $comparisonFailure);
     }
 
@@ -30,8 +37,10 @@ final class ExpectationFailedException extends RuntimeException implements Const
      * @param ComparisonFailure $comparisonFailure
      * @return ExpectationFailedException
      */
-    public static function comparisonFailure(string $description, ComparisonFailure $comparisonFailure): ExpectationFailedException
-    {
+    public static function comparisonFailure(
+        string $description,
+        ComparisonFailure $comparisonFailure
+    ): ExpectationFailedException {
         $message = \trim($description . "\n" . $comparisonFailure->getMessage());
         return new self($message, $comparisonFailure);
     }
@@ -41,8 +50,11 @@ final class ExpectationFailedException extends RuntimeException implements Const
      * @param ComparisonFailure|null $comparisonFailure
      * @param \Exception|null $previous
      */
-    public function __construct($message, ComparisonFailure $comparisonFailure = null, \Exception $previous = null)
-    {
+    public function __construct(
+        string $message,
+        ComparisonFailure $comparisonFailure = null,
+        \Exception $previous = null
+    ) {
         $this->comparisonFailure = $comparisonFailure;
 
         parent::__construct($message, 0, $previous);

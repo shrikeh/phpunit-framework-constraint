@@ -9,7 +9,7 @@
  */
 namespace PHPUnit\Framework\Constraint;
 
-use PHPUnit\Framework\ExpectationFailedException;
+use PHPUnit\Framework\Constraint\Exception\ExpectationFailedException;
 
 abstract class Composite extends Constraint
 {
