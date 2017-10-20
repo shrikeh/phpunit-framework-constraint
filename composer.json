@@ -1,53 +1,59 @@
 {
-    "name": "phpunit/phpunit-framework-constraint",
-    "description": "The PHP Unit Testing framework.",
-    "type": "library",
-    "keywords": [
-        "phpunit",
-        "constraint",
-        "testing"
-    ],
-    "homepage": "https://phpunit.de/",
-    "license": "BSD-3-Clause",
-    "authors": [
-        {
-            "name": "Sebastian Bergmann",
-            "email": "sebastian@phpunit.de",
-            "role": "lead"
-        }
-    ],
-    "support": {
-        "issues": "https://github.com/sebastianbergmann/phpunit-framework-constraint/issues"
-    },
-    "prefer-stable": true,
-    "require": {
-        "php": "^7.1",
-        "ext-dom": "*",
-        "ext-json": "*",
-        "ext-libxml": "*",
-        "ext-mbstring": "*",
-        "ext-xml": "*",
-        "sebastian/comparator": "^2.0.2"
-    },
-    "require-dev": {
-        "friendsofphp/php-cs-fixer": "^2.7",
-        "phpunit/phpunit": "^6.4.1"
-    },
-    "config": {
-        "platform": {
-            "php": "7.1.0"
-        },
-        "optimize-autoloader": true,
-        "sort-packages": true
-    },
-    "autoload": {
-        "classmap": [
-            "src/"
-        ]
-    },
-    "autoload-dev": {
-        "classmap": [
-            "tests/"
-        ]
+  "name": "phpunit/phpunit-framework-constraint",
+  "description": "The PHP Unit Testing framework.",
+  "type": "library",
+  "keywords": [
+    "phpunit",
+    "constraint",
+    "testing"
+  ],
+  "homepage": "https://phpunit.de/",
+  "license": "BSD-3-Clause",
+  "authors": [
+    {
+      "name": "Sebastian Bergmann",
+      "email": "sebastian@phpunit.de",
+      "role": "lead"
     }
+  ],
+  "support": {
+    "issues": "https://github.com/sebastianbergmann/phpunit-framework-constraint/issues"
+  },
+  "prefer-stable": true,
+  "require": {
+    "php": "^7.1",
+    "ext-dom": "*",
+    "ext-json": "*",
+    "ext-libxml": "*",
+    "ext-mbstring": "*",
+    "ext-xml": "*",
+    "sebastian/comparator": "^2.0.2"
+  },
+  "require-dev": {
+    "friendsofphp/php-cs-fixer": "^2.7",
+    "phpunit/phpunit": "^6.4.1"
+  },
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "https://github.com/shrikeh/phpunit"
+    }
+  ],
+  "config": {
+    "platform": {
+        "php": "7.1.0"
+    },
+    "optimize-autoloader": true,
+    "sort-packages": true
+  },
+  "autoload": {
+    "classmap": [
+      "src/"
+    ]
+  },
+  "autoload-dev": {
+    "classmap": [
+      "tests/"
+    ]
+  }
 }
