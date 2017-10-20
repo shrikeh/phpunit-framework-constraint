@@ -14,11 +14,10 @@ use PHPUnit\Framework\Assert;
 use PHPUnit\Framework\Constraint;
 use PHPUnit\Framework\Exception;
 use PHPUnit\Framework\ExpectationFailedException;
-use PHPUnit\Framework\TestCase;
 use PHPUnit\Framework\TestFailure;
 use PHPUnit\Util\Filter;
 
-class ConstraintTest extends TestCase
+class ConstraintTest extends ConstraintTestCase
 {
     public function testConstraintArrayNotHasKey()
     {
