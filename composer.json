@@ -48,5 +48,16 @@
         "classmap": [
             "tests/"
         ]
+    },
+    "scripts": {
+        "all": [
+            "@cs",
+            "@test"
+        ],
+        "cs": "php-cs-fixer fix --verbose",
+        "test": [
+            "@composer install",
+            "phpunit"
+        ]
     }
 }
