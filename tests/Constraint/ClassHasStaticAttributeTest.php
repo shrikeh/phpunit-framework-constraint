@@ -14,7 +14,7 @@ use PHPUnit\Framework\Constraint\Exception\ExpectationFailedException;
 use PHPUnit\Framework\TestCase;
 use PHPUnit\Framework\TestFailure;
 
-class ClassHasStaticAttributeTest extends TestCase
+class ClassHasStaticAttributeTest extends ConstraintTestCase
 {
     public function testConstraintClassHasStaticAttribute()
     {

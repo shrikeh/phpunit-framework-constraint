@@ -11,12 +11,10 @@
 namespace PHPUnit\Framework\Constraint;
 
 use PHPUnit\Framework\Assert;
-use PHPUnit\Framework\Constraint;
 use PHPUnit\Framework\Constraint\Exception\ExpectationFailedException;
-use PHPUnit\Framework\TestCase;
 use PHPUnit\Framework\TestFailure;
 
-class IsTypeTest extends TestCase
+class IsTypeTest extends ConstraintTestCase
 {
     public function testConstraintIsType()
     {
