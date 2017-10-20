@@ -8,7 +8,7 @@
  * file that was distributed with this source code.
  */
 
-namespace PHPUnit\Framework\Constraint;
+namespace PHPUnit\Constraint;
 
 /**
  * Provides human readable messages for each JSON error.

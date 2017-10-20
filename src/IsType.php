@@ -7,7 +7,7 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace PHPUnit\Framework\Constraint;
+namespace PHPUnit\Constraint;
 
 /**
  * Constraint that asserts that the value it is evaluated for is of a
@@ -67,8 +67,9 @@ class IsType extends Constraint
         if (!isset($this->types[$type])) {
             throw new \PHPUnit\Framework\Exception(
                 \sprintf(
-                    'Type specified for PHPUnit\Framework\Constraint\IsType <%s> ' .
+                    'Type specified for %s <%s> ' .
                     'is not a valid type.',
+                    static::class,
                     $type
                 )
             );

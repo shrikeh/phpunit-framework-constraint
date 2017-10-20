@@ -8,7 +8,7 @@
  * file that was distributed with this source code.
  */
 
-namespace PHPUnit\Framework\Constraint;
+namespace PHPUnit\Constraint;
 
 use Countable;
 use PHPUnit\Framework\ExpectationFailedException;

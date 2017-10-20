@@ -7,9 +7,9 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace PHPUnit\Framework\Constraint;
+namespace PHPUnit\Constraint;
 
-use PHPUnit\Framework\Constraint\Exception\InvalidArgumentException;
+use PHPUnit\Constraint\Exception\InvalidArgumentException;
 
 /**
  * Constraint that evaluates against a specified closure.
